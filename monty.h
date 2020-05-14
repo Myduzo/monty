@@ -1,12 +1,13 @@
-#ifndef _MONTY_H_
-#define _MONTY_H_
+#ifndef MONTY_H
+#define MONTY_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
 
-extern FILE *file;
 #define UNUSED(x) (void)(x);
 
 /**
@@ -40,9 +41,13 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void push(stack_t **stack, unsigned int line_number, char *data);
+void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
+void (*op_code(char *op))(stack_t **, unsigned int);
+void read_file(const char *file_name);
 
 
+extern FILE *file;
+extern char *data;
 
 #endif
