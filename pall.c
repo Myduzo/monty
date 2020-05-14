@@ -1,7 +1,8 @@
 #include "monty.h"
 /**
- * 
- * 
+ * pall - print stack elements
+ * @stack : pointer to an address
+ * @line_number : number of the line printed
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
