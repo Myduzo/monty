@@ -1,0 +1,35 @@
+#include "monty.h"
+/**
+ * read_file - read a text file and print it as stdout
+ * @file_name : name of the file 
+ */
+void read_file(const char *file_name)
+{
+    char *str = NULL, *token1 = NULL, *token2 = NULL, *delim = "\n ";
+    size_t len = 0;
+    unsigned int line_number = 1;
+    int get_line;
+    stack_t *stack;
+    void(*op)(stack_t **, unsigned int);
+    
+    file = fopen(file_name, "r");
+    get_line = getline(&str, &len, file);
+	
+    if (!file)
+    {
+		fprintf(stderr, "Error: Can't open file %s\n", file_name);
+        exit(EXIT_FAILURE);
+    }
+    while (get_line != -1)
+    {
+        token1 = strtok(str, delim);
+        token2 = strtok(NULL, delim);
+        data = token2;
+
+        op = op_code(token1);
+
+        op(&stack, line_number);
+        line_number++;
+    }
+    fclose(file);
+}
