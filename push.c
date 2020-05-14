@@ -1,10 +1,12 @@
 #include "monty.h"
 /**
- * 
- * 
+ * push - push and element to the stack
+ * @stack : pointer to an address
+ * @line_number : number of the line printed
  */
-void push(stack_t **stack, unsigned int line_number, char *data)
+void push(stack_t **stack, unsigned int line_number)
 {
+    UNUSED(line_number);
     stack_t *head;
     
     head = malloc(sizeof(stack_t));
