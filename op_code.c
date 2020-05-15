@@ -7,8 +7,8 @@ void (*op_code(char *op))(stack_t **, unsigned int)
 {
     int x = 0;
     instruction_t inst[] = {
-        {"push", push},
-        {"pall", pall},
+        {"push", _push},
+        {"pall", _pall},
         {NULL, NULL}
     };
 
