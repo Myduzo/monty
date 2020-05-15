@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+extern char *data;
 #define UNUSED(x) (void)(x);
 
 /**
@@ -41,13 +42,13 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void push(stack_t **stack, unsigned int line_number);
-void pall(stack_t **stack, unsigned int line_number);
+void _push(stack_t **head, unsigned int line_number);
+void _pall(stack_t **head, unsigned int line_number);
 void (*op_code(char *op))(stack_t **, unsigned int);
 void read_file(const char *file_name);
+int _isdigit(char *str);
+int _atoi(char *str);
+void _free(stack_t *head);
 
-
-extern FILE *file;
-extern char *data;
 
 #endif
