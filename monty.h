@@ -8,8 +8,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-extern char *data;
-extern FILE *file;
+
 #define UNUSED(x) (void)(x);
 
 /**
@@ -50,6 +49,7 @@ void read_file(const char *file_name);
 int _isdigit(char *str);
 int _atoi(char *str);
 void _free(stack_t *head);
-
+extern char *data;
+extern FILE *file;
 
 #endif
