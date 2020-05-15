@@ -9,6 +9,7 @@
 #include <unistd.h>
 
 extern char *data;
+extern FILE *file;
 #define UNUSED(x) (void)(x);
 
 /**
