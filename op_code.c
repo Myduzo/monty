@@ -2,21 +2,22 @@
 /**
  * op_code - search and select the function needed
  * @op : operator
+ * Return: NULL
  */
 void (*op_code(char *op))(stack_t **, unsigned int)
 {
-    int x = 0;
-    instruction_t inst[] = {
-        {"push", _push},
-        {"pall", _pall},
-        {NULL, NULL}
-    };
+	int x = 0;
 
-    while (inst[x].opcode)
-    {
-        if(strcmp(inst[x].opcode, op) == 0)
-            return (inst[x].f);
-        x++;
-    }
-    return (NULL);
+	instruction_t inst[] = {
+		{"push", _push},
+		{"pall", _pall},
+		{NULL, NULL}
+	};
+
+	for (; inst[x].opcode; x++)
+	{
+		if (strcmp(inst[x].opcode, op) == 0)
+			return (inst[x].f);
+	}
+	return (NULL);
 }
