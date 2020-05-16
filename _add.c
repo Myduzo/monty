@@ -7,9 +7,6 @@
 void _add(stack_t **head, unsigned int line_number)
 {
 	int add;
-	stack_t *tmp;
-
-	tmp = (*head)->next;
 
 	if (!*head || !(*head)->next)
 	{
@@ -18,8 +15,7 @@ void _add(stack_t **head, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	add = tmp->n + (*head)->n;
+	add = (*head)->n + (*head)->next->n;
 	_pop(&(*head), line_number);
-	tmp->n = add;
-	tmp->prev = NULL;
+	(*head)->n = add;
 }
