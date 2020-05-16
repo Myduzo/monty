@@ -4,7 +4,7 @@
  * @head : the head node
  * @line_number : line number counter
  */
-void _swap(stack_t **head, unsigned int line_number __attribute__ ((unused)))
+void _swap(stack_t **head, unsigned int line_number)
 {
 	int swap;
 	stack_t *tmp;
@@ -12,7 +12,7 @@ void _swap(stack_t **head, unsigned int line_number __attribute__ ((unused)))
 	tmp = (*head)->next;
 	if (!(*head) || !tmp)
 	{
-		fprintf(stderr, "Error: malloc failed\n"),
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number),
 		exit(EXIT_FAILURE);
 	}
 
