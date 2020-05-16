@@ -13,6 +13,7 @@ void (*op_code(char *op))(stack_t **, unsigned int)
 		{"pall", _pall},
 		{"pint", _pint},
 		{"pop", _pop},
+		{"swap", _swap},
 		{NULL, NULL}
 	};
 

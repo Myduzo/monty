@@ -49,6 +49,8 @@ void _push(stack_t **head, unsigned int line_number __attribute__ ((unused)));
 void _pall(stack_t **head, unsigned int line_number __attribute__ ((unused)));
 void _pint(stack_t **head, unsigned int line_number);
 void _pop(stack_t **head, unsigned int line_number);
+void _swap(stack_t **head, unsigned int line_number __attribute__ ((unused)));
+
 
 
 extern char *data;
