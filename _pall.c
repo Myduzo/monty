@@ -4,9 +4,8 @@
  * @head : pointer to an address
  * @line_number : number of the line printed
  */
-void _pall(stack_t **head, unsigned int line_number)
+void _pall(stack_t **head, unsigned int line_number __attribute__ ((unused)))
 {
-	UNUSED(line_number);
 	stack_t *stack = *head;
 
 	while (stack)
