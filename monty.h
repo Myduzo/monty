@@ -51,6 +51,7 @@ void _pint(stack_t **head, unsigned int line_number);
 void _pop(stack_t **head, unsigned int line_number);
 void _swap(stack_t **head, unsigned int line_number);
 void _add(stack_t **head, unsigned int line_number);
+void _nop(stack_t **head, unsigned int line_number);
 
 
 extern char *data;
