@@ -11,6 +11,7 @@ void (*op_code(char *op))(stack_t **, unsigned int)
 	instruction_t inst[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL}
 	};
 

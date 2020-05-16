@@ -39,13 +39,16 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+
+void read_file(const char *file_name);
+void (*op_code(char *op))(stack_t **, unsigned int);
+int _isdigit(char *str);
+void _free(stack_t *head);
+
 void _push(stack_t **head, unsigned int line_number __attribute__ ((unused)));
 void _pall(stack_t **head, unsigned int line_number __attribute__ ((unused)));
-void (*op_code(char *op))(stack_t **, unsigned int);
-void read_file(const char *file_name);
-int _isdigit(char *str);
-int _atoi(char *str);
-void _free(stack_t *head);
+void _pint(stack_t **head, unsigned int line_number);
+
 extern char *data;
 extern FILE *file;
 
