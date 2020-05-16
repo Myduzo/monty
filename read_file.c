@@ -25,7 +25,7 @@ void read_file(const char *file_name)
 		op = op_code(token1);
 		if (!op)
 		{
-			fprintf(stderr, "L%d: unknown instruction %s", l, token1);
+			fprintf(stderr, "L%d: unknown instruction %s\n", l, token1);
 			exit(EXIT_FAILURE);
 		}
 
