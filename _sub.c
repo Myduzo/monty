@@ -16,8 +16,11 @@ void _sub(stack_t **head, unsigned int line_number)
 	}
 
 	if ((*head)->n > (*head)->next->n)
+	{
 		sub = (*head)->n - (*head)->next->n;
-
+		sub *= -1;
+	}
+	
 	else
 		sub = (*head)->next->n - (*head)->n;
 
