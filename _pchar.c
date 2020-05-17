@@ -6,19 +6,15 @@
  */
 void _pchar(stack_t **head, unsigned int line_number)
 {
-	int n = (*head)->n;
 
 	if (!*head)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
-		free(*head);
 		exit(EXIT_FAILURE);
 	}
 
-	if ((n >= 65 && n <= 90) || (n >= 97 && n <= 122))
-	{
+	if (isascii((*head)->n))
 		printf("%c\n", (*head)->n);
-	}
 
 	else
 	{
