@@ -10,14 +10,14 @@ void _div(stack_t **head, unsigned int line_number)
 
 	if (!*head || !(*head)->next)
 	{
-		fprintf(stderr, "L%d: can't div, stack too short", line_number);
+		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
 		free(*head);
 		exit(EXIT_FAILURE);
 	}
 
 	if ((*head)->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero", line_number),
+		fprintf(stderr, "L%d: division by zero\n", line_number),
 		exit(EXIT_FAILURE);
 	}
 
