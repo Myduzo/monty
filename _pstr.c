@@ -6,19 +6,18 @@
  */
 void _pstr(stack_t **head, unsigned int line_number __attribute__ ((unused)))
 {
+	stack_t *tmp = *head;
+
 	if (!*head)
-	{
 		printf("\n");
-	}
 	
-	while (*head && (*head)->n > 0)
+	while (tmp && tmp->n >0)
 	{
-		if (isascii((*head)->n))
-		{
-			printf("%c", (*head)->n);
-		}
-		*head = (*head)->next;
+		if (isascii(tmp->n) == 0)
+			printf("\n");
+
+		printf("%c", tmp->n);
+		tmp = tmp->next;
 	}
 	printf("\n");
-
 }
