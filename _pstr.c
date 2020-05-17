@@ -9,14 +9,16 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__ ((unused)))
 	stack_t *tmp = *head;
 
 	if (!*head)
+	{
 		printf("\n");
-	
+		return;
+	}
+
 	while (tmp && tmp->n >0)
 	{
-		if (isascii(tmp->n) == 0)
-			printf("\n");
-
-		printf("%c", tmp->n);
+		if (isascii(tmp->n) > 0)
+			printf("%c", tmp->n);
+		
 		tmp = tmp->next;
 	}
 	printf("\n");
