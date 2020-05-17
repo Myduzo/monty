@@ -22,6 +22,9 @@ void read_file(const char *file_name)
 		token2 = strtok(NULL, delim);
 		data = token2;
 
+		if (token1[0] == '#')
+			continue;
+
 		op = op_code(token1);
 		if (!op)
 		{
