@@ -14,11 +14,13 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__ ((unused)))
 		return;
 	}
 
-	while (tmp && tmp->n >0)
+	while (tmp && tmp->n > 0)
 	{
 		if (isascii(tmp->n) > 0)
 			printf("%c", tmp->n);
-		
+		else
+			break;
+
 		tmp = tmp->next;
 	}
 	printf("\n");
