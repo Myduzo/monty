@@ -20,6 +20,5 @@ void _pstr(stack_t **head, unsigned int line_number __attribute__ ((unused)))
 		*head = (*head)->next;
 	}
 	printf("\n");
-	free(head);
 
 }
