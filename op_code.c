@@ -19,6 +19,7 @@ void (*op_code(char *op))(stack_t **, unsigned int)
 		{"sub", _sub},
 		{"div", _div},
 		{"mul", _mul},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 
